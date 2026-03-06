@@ -1,115 +1,51 @@
-Online Examination System
+# Student Examination System
 
-Project Overview
+A web-based application for conducting online examinations.  
+Students can answer questions and view their results automatically after submission.
 
-The Online Examination System is a web-based application developed using PHP, MySQL, HTML, and CSS.
-It allows users to take an online test, submit answers, and automatically receive their score.
-All exam results are stored in a database for record keeping.
-
-This project demonstrates basic concepts of:
-
-- Web development
-- Database connectivity
-- Server-side processing
-- Simple exam evaluation logic
-
----
-
-Features
-
-- Display multiple-choice questions
-- Submit answers through a web form
+## Features
+- Online exam interface
+- Multiple choice question submission
 - Automatic score calculation
-- Store exam results in a database
-- Prevent multiple attempts by the same user
-- Show exam score and percentage after submission
+- Result display after exam completion
 
----
+## Tech Stack
+- PHP
+- MySQL
+- HTML
+- CSS
+- XAMPP
 
-Technologies Used
-
-- Frontend: HTML, CSS
-- Backend: PHP
-- Database: MySQL
-- Server Environment: XAMPP (Apache + MySQL)
-
----
-
-Project Structure
-
-online_exam/
+## Project Structure
+student-examination-system
 │
-├── index.php        # Exam page displaying questions
-├── submit.php       # Evaluates answers and stores results
-├── db.php           # Database connection file
-├── style.css        # UI styling
-└── README.md        # Project documentation
+├── admin.php
+├── db.php
+├── exam.php
+├── index.php
+├── result.php
+├── submit.php
+├── online.sql
+└── screenshots
 
----
-
-Database Setup
-
-1. Open phpMyAdmin
-2. Create a new database:
-
-online_exam
-
-3. Create tables such as:
-
-Questions Table
-
-Stores exam questions and options.
-
-Results Table
-
-Stores user scores and exam attempts.
-
-Users Table
-
-Stores user information (optional for login).
-
----
-
-How to Run the Project
+## How to Run the Project
 
 1. Install XAMPP.
-2. Start Apache and MySQL from the XAMPP Control Panel.
-3. Place the project folder inside:
+2. Copy the project folder into:
+  xampp/htdocs/
 
-xampp/htdocs/
+3. Start Apache and MySQL in XAMPP.
+4. Import the `online.sql` file into phpMyAdmin.
+5. Open the browser and run:
+http://localhost/online_exam
 
-Example:
+## Screenshots
 
-xampp/htdocs/online_exam
+### Exam Page
+![Exam Page](screenshots/exam_page.png)
 
-4. Open a browser and go to:
+### Result Page
+![Result Page](screenshots/result_page.png)
 
-http://localhost/online_exam/
-
-5. Open phpMyAdmin to manage the database:
-
-http://localhost/phpmyadmin
-
----
-
-How the System Works
-
-1. The user opens the exam page.
-2. Questions are fetched from the database.
-3. The user selects answers and submits the form.
-4. PHP compares submitted answers with correct options.
-5. The score is calculated.
-6. The result is stored in the database.
-7. The score and percentage are displayed to the user.
-
----
-
-Possible Improvements
-
-Future improvements can include:
-
-- User login and authentication
-- Admin panel to add/edit questions
-- Exam timer
-- Randomized questions
-- Detailed result analysis
+## Author
+Sravya Vojjala
